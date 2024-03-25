@@ -1,0 +1,117 @@
+.prose {
+  --pfont: #555;
+  --pfont-deep: #222;
+  --pfont-deeper: #000;
+}
+
+.shiki span {
+  color: var(--s-light, inherit);
+}
+
+[data-bs-theme="dark"] .prose {
+  --pfont: #bbb;
+  --pfont-deep: #ddd;
+  --pfont-deeper: #fff;
+}
+
+.shiki {
+  color: var(--s-light, inherit);
+  background-color: #fafafa;
+  --twoslash-popup-bg: #fafafa;
+}
+
+[data-bs-theme="dark"] .shiki {
+  color: var(--s-dark, inherit);
+  background-color: #0e0e0e;
+  --twoslash-popup-bg: #191919;
+  --twoslash-border-color: #8884;
+}
+.prose .shiki {
+  font-size: 0.92em;
+  line-height: 1.4;
+  margin: 0.5em 0;
+}
+
+
+a.header-anchor {
+  float: left;
+  margin-top: 0.125em;
+  margin-left: -1.2em;
+  padding-right: 0.5em;
+  font-size: 0.85em;
+  opacity: 0;
+  text-decoration: none;
+  border: 0 !important;
+}
+
+a.header-anchor:hover,
+a.header-anchor:focus {
+  text-decoration: none;
+}
+
+
+h1:hover .header-anchor,
+h1:focus .header-anchor,
+h2:hover .header-anchor,
+h2:focus .header-anchor,
+h3:hover .header-anchor,
+h3:focus .header-anchor,
+h4:hover .header-anchor,
+h4:focus .header-anchor,
+h5:hover .header-anchor,
+h5:focus .header-anchor,
+h6:hover .header-anchor,
+h6:focus .header-anchor {
+  opacity: 0.6;
+}
+
+.table-of-contents {
+  position: fixed;
+  top: 90px;
+  bottom: 0;
+  font-size: 0.8em;
+  left: 20px;
+  z-index: 200;
+  overflow: hidden;
+  --uno: hidden lg-flex flex-col w-100px lg-w-200px xl-w-300px;
+}
+
+.table-of-contents-anchor {
+  --uno: mx2 w-7 h-7 text-lg flex items-center justify-center bg-base rounded
+    text-hex-8887 border border-base shadow md: border-transparent md:
+    shadow-none transition duration-400;
+}
+
+.table-of-contents > ul {
+  text-overflow: ellipsis;
+  height: 100%;
+  overflow-y: auto;
+  --uno: rounded op0 mt-1 pb-5 transition duration-700;
+}
+
+*:hover > .table-of-contents > .table-of-contents-anchor,
+.toc-always-on .table-of-contents > .table-of-contents-anchor {
+  --uno: text-inherit;
+}
+
+.toc-always-on .table-of-contents > ul {
+  opacity: 0.6;
+}
+
+*:hover > .table-of-contents > ul {
+  opacity: 0.75;
+}
+
+.table-of-contents ul > li::before {
+  display: none;
+}
+
+.table-of-contents ul > li {
+  padding-left: 0.8rem;
+  line-height: 1.5em;
+  margin-top: 0.5em;
+}
+
+.table-of-contents ul > li > a {
+  --uno: op75 hover-op100 transition;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@plug/vite-vue-markdown",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "pnpm run build --watch",
+    "build": "tsup index.ts --dts --format cjs,esm"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/markdown-it": "^13.0.7",
+    "markdown-it": "^14.0.0"
+  }
+}

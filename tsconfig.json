@@ -1,16 +1,23 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "target": "ES2020",
     "module": "ESNext",
+    "baseUrl": ".",
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "Node",
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "rootDir": ".",
     "jsx": "preserve",
-
-    /* Linting */
     "strict": true,
   },
+  "include": [
+    "vite.config.ts",
+    "example"
+  ],
+  "exclude": ["node_modules"]
 }
