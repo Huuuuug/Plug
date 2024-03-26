@@ -14,14 +14,21 @@
   },
   "packageManager": "pnpm@8.15.4",
   "engines": {
-    "node": ">=16",
+    "node": ">=18",
     "pnpm": ">=8.0.0"
   },
   "scripts": {
     "dev": "pnpm run build --watch",
     "build": "tsup index.ts --dts --format cjs,esm"
   },
+  "keywords": [
+
+  ],
+  "author": "HuGang",
   "license": "MIT",
+  "peerDependencies": {
+    "vite": ">2.0.0-0"
+  },
   "dependencies": {
     "@types/markdown-it": "^13.0.7",
     "markdown-it": "^14.0.0"

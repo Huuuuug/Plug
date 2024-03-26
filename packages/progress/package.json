@@ -1,8 +1,16 @@
 {
-  "name": "@plug/vite-progress-bar",
-  "version": "0.0.0",
+  "name": "ganfu-vite-progress",
+  "version": "1.0.0",
   "type": "module",
   "description": "A progress bar plugin for Vite.",
+  "author": "HuGang",
+  "license": "MIT",
+  "packageManager": "pnpm@8.15.4",
+  "homepage": "https://github.com/Huuuuug/Plug/tree/main/packages/progress",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huuuuug/Plug.git"
+  },
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,13 +21,35 @@
       "require": "./dist/index.cjs"
     }
   },
+  "peerDependencies": {
+    "vite": "^2.0.0 || ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8.0.0"
+  },
+  "tsup": {
+    "entry": [
+      "./*.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "splitting": true,
+    "shims": true,
+    "dts": true,
+    "clean": true
+  },
   "scripts": {
     "dev": "pnpm run build --watch",
-    "build": "tsup index.ts --dts --format cjs,esm"
+    "build": "tsup"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "vite",
+    "plugin",
+    "progress"
+  ],
   "dependencies": {
     "picocolors": "^1.0.0",
     "progress": "^2.0.3"

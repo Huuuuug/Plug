@@ -1,18 +1,19 @@
 {
   "name": "plug",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "pnpm -C example run dev",
     "markdown:dev": "pnpm -C packages/plug-vue-markdown dev",
-    "progress:dev": "pnpm -C packages/progress dev"
+    "markdown:build": "pnpm -C packages/plug-vue-markdown  build",
+    "progress:dev": "pnpm -C packages/progress dev",
+    "progress:build": "pnpm -C packages/progress build"
   },
   "dependencies": {
     "vue": "^3.4.21"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "eslint": "^8.57.0",
     "tsup": "^8.0.2",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
