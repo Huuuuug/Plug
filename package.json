@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm -C example run dev",
-    "markdown:dev": "pnpm -C packages/plug-vue-markdown dev"
+    "markdown:dev": "pnpm -C packages/plug-vue-markdown dev",
+    "progress:dev": "pnpm -C packages/progress dev"
   },
   "dependencies": {
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@types/node": "^20.11.30",
     "tsup": "^8.0.2",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
