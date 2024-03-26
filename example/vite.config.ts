@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import MarkdownItShiki from "@shikijs/markdown-it";
+import { rendererRich, transformerTwoslash } from "@shikijs/twoslash";
 
 import Tempalte from "@plug/vite-vue-markdown";
-import { rendererRich, transformerTwoslash } from "@shikijs/twoslash";
+import Progress from "@plug/vite-progress-bar";
 
 export default defineConfig({
   plugins: [
@@ -33,8 +34,11 @@ export default defineConfig({
         );
       },
     }),
+    Progress({
+      total: 200,
+      width: 60,
+      complete: "=",
+      incomplete: "",
+    }),
   ],
-  build: {
-    sourcemap: true,
-  },
 });

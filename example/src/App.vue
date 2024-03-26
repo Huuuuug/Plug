@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import Mk from './pages/index.md'
+import Mk from '../pages/index.md'
 </script>
 
 <template>
